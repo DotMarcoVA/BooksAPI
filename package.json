@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon --exec npm run production src/index.js",
-        "production": "babel-node --preset=@babel/preset-env"
+        "production": "babel-node --presets=@babel/preset-env"
     },
     "keywords": [
         "API",
@@ -24,6 +24,7 @@
         "@babel/core": "^7.19.3",
         "@babel/node": "^7.19.1",
         "@babel/preset-env": "^7.19.3",
+        "ascii-doge": "^1.0.0",
         "morgan": "^1.10.0",
         "nodemon": "^2.0.20"
     },
