@@ -10,6 +10,13 @@ async function readBooks(response) {
     return response.json(result);
 }
 
+async function readVideos(response) {
+    const connection = await getConnection();
+    // Query SQL donde especifica: SELECCIONAR TODOS DESDE videos
+    const result = await connection.query("SELECT * FROM videos");
+    return response.json(result);
+}
+
 // Funcion Readbook la cual contiene el QuerySQL para traer un libro en especifico
 // Requiere: Endpoint, ID
 async function readBook(body, response) {
@@ -90,4 +97,5 @@ export const methods = {
     createBook,
     updateBook,
     deleteBook,
+    readVideos,
 };

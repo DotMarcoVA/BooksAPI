@@ -11,5 +11,7 @@ router.post("/", bookControllers.createBook); // POST http://127.0.0.1:4000/api/
 router.put("/:id", bookControllers.updateBook); // PUT http://127.0.0.1:4000/api/books/id
 router.delete("/:id", bookControllers.deleteBook); // DELETE http://127.0.0.1:4000/api/books/id
 
+// router.get("/", bookControllers.getVideos); // GET
+
 // Exportar Metodos
 export default router;

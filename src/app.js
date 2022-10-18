@@ -21,6 +21,6 @@ app.use(express.json());
 
 /* Middleware que se ejecuta cada que inicia el servidor */
 app.use("/api/books", bookRoutes);
-
+app.use("/api/videos", bookRoutes);
 // Exportar el componente app
 export default app;

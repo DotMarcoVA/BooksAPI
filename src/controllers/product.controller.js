@@ -16,6 +16,19 @@ const getBooks = async (req, res) => {
     }
 };
 
+const getVideos = async (req, res) => {
+    // TryCatch para conexion y acceso a la base de datos
+    try {
+        // Se llama a la funcion y se guarda la respuesta en query
+        const query = await bookServices.readVideos(res);
+        return query;
+    } catch (error) {
+        // En caso de error, se regresa un status y se muestra
+        res.status(400);
+        res.send(error.message);
+    }
+};
+
 // Metodo GetBook que trae un metodo en conciso (Req: id)
 const getBook = async (req, res) => {
     // TryCatch para conexion y acceso a la base de datos
@@ -79,4 +92,5 @@ export const methods = {
     createBook,
     updateBook,
     deleteBook,
+    getVideos,
 };
